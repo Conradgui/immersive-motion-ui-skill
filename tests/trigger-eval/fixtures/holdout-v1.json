@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "split": "holdout",
+  "frozen_on": "2026-07-13",
+  "items": [
+    {
+      "id": "TRG-H01",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "brand",
+      "critical_negative": false,
+      "prompt": "Create a launch page for a research instrument. The visual world should explain precision and experimentation, not imitate a crypto landing page."
+    },
+    {
+      "id": "TRG-H02",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "product",
+      "critical_negative": false,
+      "prompt": "设计一个客服主管每天使用的工单工作台：要能快速发现 SLA 风险、分配负责人并保留处理记录。"
+    },
+    {
+      "id": "TRG-H03",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "commerce",
+      "critical_negative": false,
+      "prompt": "Improve a furniture product page so shoppers can inspect dimensions, materials, lead times, delivery constraints, and configuration changes."
+    },
+    {
+      "id": "TRG-H04",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "data",
+      "critical_negative": false,
+      "prompt": "为医院运营团队设计床位周转分析页，明确哪些信息应使用表格、哪些适合趋势图，并标出数据来源和更新时间。"
+    },
+    {
+      "id": "TRG-H05",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "motion",
+      "critical_negative": false,
+      "prompt": "Add one meaningful motion system to an editorial story about ocean currents, with a calm mobile and reduced-motion path."
+    },
+    {
+      "id": "TRG-H06",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "redesign",
+      "critical_negative": false,
+      "prompt": "这个品牌站已经有可用的导航和预约表单，请在不推翻它们的前提下提升首屏层级、图片节奏和可信度。"
+    },
+    {
+      "id": "TRG-H07",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "design-system",
+      "critical_negative": false,
+      "prompt": "Define semantic tokens and component states for a multi-page financial product that must support light, dark, and high-contrast modes."
+    },
+    {
+      "id": "TRG-H08",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "modern-web",
+      "critical_negative": false,
+      "prompt": "用原生 dialog 或 Popover API 改善一个筛选说明交互，但要先判断键盘、焦点和兼容性 fallback。"
+    },
+    {
+      "id": "TRG-H09",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "brand",
+      "critical_negative": false,
+      "prompt": "Design a portfolio for a typographer with one memorable signature interaction, but keep project retrieval and reading comfortable."
+    },
+    {
+      "id": "TRG-H10",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "product",
+      "critical_negative": false,
+      "prompt": "为供应链异常处理设计高信息密度界面，避免把关键队列藏在 KPI 卡片和多个弹窗之后。"
+    },
+    {
+      "id": "TRG-H11",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "commerce",
+      "critical_negative": false,
+      "prompt": "Build a subscription comparison surface that makes price, renewal, cancellation, and eligibility states unambiguous."
+    },
+    {
+      "id": "TRG-H12",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "data",
+      "critical_negative": false,
+      "prompt": "选择一个方式解释模型预测与实际结果的偏差，并让低置信度和缺失数据不会被用户误解为精确结论。"
+    },
+    {
+      "id": "TRG-H13",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "a11y",
+      "critical_negative": false,
+      "prompt": "Audit an interactive product gallery for accessible names, keyboard navigation, focus order, and alternatives to hover-only information."
+    },
+    {
+      "id": "TRG-H14",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "performance",
+      "critical_negative": false,
+      "prompt": "一个带视频首屏的品牌页 LCP 很慢。请建立可测量的诊断路径，并在不粗暴删除体验的前提下提出优化方向。"
+    },
+    {
+      "id": "TRG-H15",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "memory",
+      "critical_negative": false,
+      "prompt": "Investigate a dashboard where opening and closing a chart drawer repeatedly appears to leave timers and observers behind."
+    },
+    {
+      "id": "TRG-H16",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "browser-debug",
+      "critical_negative": false,
+      "prompt": "请通过浏览器检查一个响应式表格：移动端横向溢出、筛选后焦点丢失，并且控制台偶尔报错。"
+    },
+    {
+      "id": "TRG-H17",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "a11y",
+      "critical_negative": false,
+      "prompt": "Evaluate whether this checkout confirmation flow restores focus correctly and communicates async errors without relying on color."
+    },
+    {
+      "id": "TRG-H18",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "performance",
+      "critical_negative": false,
+      "prompt": "检查首页动画、字体和图片加载是否造成布局跳动或渲染阻塞，并区分静态风险与真实测量。"
+    },
+    {
+      "id": "TRG-H19",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "memory",
+      "critical_negative": false,
+      "prompt": "Review cleanup ownership for a route that combines video playback, GSAP timelines, IntersectionObservers, and WebGL textures."
+    },
+    {
+      "id": "TRG-H20",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "browser-debug",
+      "critical_negative": false,
+      "prompt": "用真实浏览器定位一个 Popover 在缩放和窄容器下被裁切的问题，并验证降级路径。"
+    },
+    {
+      "id": "TRG-H21",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "backend",
+      "critical_negative": true,
+      "prompt": "Add idempotency handling to a payment webhook endpoint and write integration tests for duplicate events."
+    },
+    {
+      "id": "TRG-H22",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "database",
+      "critical_negative": true,
+      "prompt": "为一张千万级日志表设计分区和索引策略，重点是查询计划与写入成本。"
+    },
+    {
+      "id": "TRG-H23",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "cloud",
+      "critical_negative": true,
+      "prompt": "Set up Firebase Hosting rewrites and deployment configuration for an existing SSR application."
+    },
+    {
+      "id": "TRG-H24",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "extension",
+      "critical_negative": true,
+      "prompt": "实现一个 Chrome 扩展的 Service Worker 生命周期和消息通信，不需要设计扩展界面。"
+    },
+    {
+      "id": "TRG-H25",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "copywriting",
+      "critical_negative": false,
+      "prompt": "Rewrite this investor update so it is concise, credible, and suitable for email."
+    },
+    {
+      "id": "TRG-H26",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "image-generation",
+      "critical_negative": false,
+      "prompt": "生成一张俯视角的现代茶具静物摄影，画面干净且背景透明。"
+    },
+    {
+      "id": "TRG-H27",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "static-data",
+      "critical_negative": false,
+      "prompt": "Parse these JSON logs and produce a CSV of requests grouped by status code."
+    },
+    {
+      "id": "TRG-H28",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "security",
+      "critical_negative": true,
+      "prompt": "审查这个文件上传接口的 MIME 校验、路径遍历和对象存储权限风险。"
+    },
+    {
+      "id": "TRG-H29",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "devops",
+      "critical_negative": true,
+      "prompt": "Create a Terraform module for an S3 bucket with encryption, versioning, and lifecycle rules."
+    },
+    {
+      "id": "TRG-H30",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "documentation",
+      "critical_negative": false,
+      "prompt": "把这份数据库故障复盘整理成面向新同事的技术文档。"
+    },
+    {
+      "id": "TRG-H31",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "backend",
+      "critical_negative": true,
+      "prompt": "Implement rate limiting middleware for a Fastify API and explain the Redis failure mode."
+    },
+    {
+      "id": "TRG-H32",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "database",
+      "critical_negative": true,
+      "prompt": "解释这条复杂 SQL 为什么没有使用索引，并给出不改变业务逻辑的改写建议。"
+    },
+    {
+      "id": "TRG-H33",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "cloud",
+      "critical_negative": true,
+      "prompt": "Compare managed queues for a background image-processing pipeline, focusing on retries and dead-letter behavior."
+    },
+    {
+      "id": "TRG-H34",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "extension",
+      "critical_negative": true,
+      "prompt": "为浏览器扩展设计权限最小化方案和安装后升级迁移策略。"
+    },
+    {
+      "id": "TRG-H35",
+      "split": "holdout",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "copywriting",
+      "critical_negative": false,
+      "prompt": "Write a short FAQ for a privacy policy update without changing any application UI."
+    },
+    {
+      "id": "TRG-H36",
+      "split": "holdout",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "image-generation",
+      "critical_negative": false,
+      "prompt": "Turn this sketch into a polished watercolor illustration with no text or interface elements."
+    }
+  ]
+}

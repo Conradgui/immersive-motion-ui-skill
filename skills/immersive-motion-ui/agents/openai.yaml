@@ -1,0 +1,8 @@
+interface:
+  display_name: "Immersive Motion UI"
+  short_description: "Premium UI direction, motion, and verification"
+  default_prompt: "Use $immersive-motion-ui to design and verify a premium motion-forward web interface."
+
+policy:
+  allow_implicit_invocation: true
+

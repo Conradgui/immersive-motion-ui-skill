@@ -1,0 +1,41 @@
+{
+  "package": "immersive-motion-ui-skill",
+  "target_remote": "Conradgui/immersive-motion-ui-skill.git",
+  "release_scope": "codex-only-first-release",
+  "skill_name": "immersive-motion-ui",
+  "skill_path": "skills/immersive-motion-ui",
+  "library_dependency": {
+    "required": false,
+    "target_remote": "Conradgui/immersive-motion-ui-library.git",
+    "relationship": "optional enhancement"
+  },
+  "include": [
+    "README.md",
+    "skills/immersive-motion-ui/SKILL.md",
+    "skills/immersive-motion-ui/capability-manifest.json",
+    "skills/immersive-motion-ui/agents/openai.yaml",
+    "skills/immersive-motion-ui/references/",
+    "skills/immersive-motion-ui/examples/",
+    "skills/immersive-motion-ui/scripts/",
+    "tests/"
+  ],
+  "exclude": [
+    "prompts/",
+    "Pro prompts/",
+    "pro-prompts/",
+    "assets/",
+    "demos/",
+    "index.html",
+    "references-index/",
+    "library-manifest.json",
+    "multi-platform mirrors",
+    ".git/"
+  ],
+  "validation_gates": [
+    "quick_validate.py passes on skills/immersive-motion-ui",
+    "core package contains no prompt corpus or root Library assets/demos; only bounded Skill examples",
+    "frozen trigger-proxy fixture and scorer mechanics pass without a Library dependency",
+    "Core-only forward eval passes without library",
+    "README explains Core-only and optional Library modes"
+  ]
+}

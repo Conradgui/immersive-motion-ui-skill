@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "skill_name": "immersive-motion-ui",
+  "platform_scope": "codex-only-first-release",
+  "library_dependency": {
+    "required": false
+  },
+  "capabilities": [
+    {
+      "id": "M01",
+      "name": "触发、路由与用户可控性",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["route", "audit", "redesign"],
+      "references": ["references/routing.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "core-routing",
+      "verifier": "routing-eval"
+    },
+    {
+      "id": "M02",
+      "name": "项目环境与既有技术栈发现",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["inspect project", "existing stack"],
+      "references": ["references/preflight.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "manual-project-inspection",
+      "verifier": "preflight-report"
+    },
+    {
+      "id": "M03",
+      "name": "行业判断、设计方向与反默认",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["design direction", "industry"],
+      "references": ["references/design-dna.md", "references/visual-directions.md", "references/anti-cheap.md", "references/industry-directions.md", "references/showcase-casebook.md", "examples/README.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "core-design-dna",
+      "verifier": "design-readout"
+    },
+    {
+      "id": "M04",
+      "name": "布局、组件、产品 UI 与 Commerce",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["brand", "product ui", "commerce"],
+      "references": ["references/brand-ui.md", "references/product-ui.md", "references/commerce-ui.md", "references/data-ui.md", "references/design-system.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "generic-ui-guidance",
+      "verifier": "ui-review"
+    },
+    {
+      "id": "M05",
+      "name": "动效、3D、视频、媒体和资源选择",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["motion", "3d", "video"],
+      "references": ["references/motion-engines.md", "references/media-assets.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "css-and-static-media",
+      "verifier": "motion-review"
+    },
+    {
+      "id": "M06",
+      "name": "现代 HTML、CSS、Web API 与兼容性",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["modern css", "web api"],
+      "references": ["references/modern-web.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "current-web-docs",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": true
+        }
+      ],
+      "fallback": "stable-local-baseline",
+      "verifier": "compatibility-review"
+    },
+    {
+      "id": "M07",
+      "name": "数据应用、表格、图表和数据可视化",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["dashboard", "data app", "chart"],
+      "references": ["references/data-apps.md", "references/data-ui.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "product-ui-guidance",
+      "verifier": "data-ui-review"
+    },
+    {
+      "id": "M08",
+      "name": "浏览器交互、调试、网络和控制台",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["browser debug", "console", "network"],
+      "references": ["references/browser-debugging.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "browser-tooling",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": false
+        }
+      ],
+      "fallback": "static-code-review",
+      "verifier": "browser-evidence"
+    },
+    {
+      "id": "M09",
+      "name": "LCP、CWV、加载与渲染性能",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["lcp", "slow page", "cwv"],
+      "references": ["references/performance.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "browser-trace",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": true
+        }
+      ],
+      "fallback": "static-performance-review",
+      "verifier": "trace-and-rerun"
+    },
+    {
+      "id": "M10",
+      "name": "内存、监听器、动画和生命周期清理",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["memory leak", "oom", "listener cleanup"],
+      "references": ["references/memory-lifecycle.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "heap-or-memlab",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": true
+        }
+      ],
+      "fallback": "lifecycle-checklist",
+      "verifier": "heap-comparison"
+    },
+    {
+      "id": "M11",
+      "name": "语义、ARIA、键盘、焦点和色彩对比",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["a11y", "aria", "keyboard"],
+      "references": ["references/preflight.md", "references/anti-cheap.md", "references/a11y-audit.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "static-a11y-review",
+      "verifier": "a11y-evidence"
+    },
+    {
+      "id": "M14",
+      "name": "长流程状态、设计系统和跨页面一致性",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["multi-page", "design system"],
+      "references": ["references/workflow-state.md", "references/design-system.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "figma-tooling",
+          "kind": "optional",
+          "credentialed": true,
+          "time_sensitive": true
+        }
+      ],
+      "fallback": "lightweight-worklog",
+      "verifier": "state-review"
+    },
+    {
+      "id": "M15",
+      "name": "验证证据、forward eval 和诚实状态",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["verify", "evidence", "forward eval"],
+      "references": ["references/verification-evidence.md", "references/eval-protocol.md"],
+      "planned_references": [],
+      "dependencies": [],
+      "fallback": "not-executed-report",
+      "verifier": "evidence-validator"
+    },
+    {
+      "id": "M16",
+      "name": "打包、依赖、更新和维护边界",
+      "status": "active",
+      "default_load": false,
+      "triggers": ["package", "dependency", "library"],
+      "references": ["references/library-integration.md", "references/dependency-policy.md"],
+      "planned_references": [],
+      "dependencies": [
+        {
+          "name": "immersive-motion-ui-library",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": true
+        }
+      ],
+      "fallback": "core-only",
+      "verifier": "package-validator"
+    }
+  ]
+}

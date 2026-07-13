@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "frozen_on": "2026-07-13",
+  "items": [
+    {
+      "id": "TRG-D01",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "brand",
+      "critical_negative": false,
+      "prompt": "为一间独立建筑事务所设计作品集首页。首屏要让访客感到材料和改造逻辑，而不是套用通用 SaaS 模板。"
+    },
+    {
+      "id": "TRG-D02",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "product",
+      "critical_negative": false,
+      "prompt": "Redesign the operations dashboard so dispatchers can triage delayed jobs, inspect details, and take action without leaving context."
+    },
+    {
+      "id": "TRG-D03",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "commerce",
+      "critical_negative": false,
+      "prompt": "重做精品酒店预订页：用户需要比较房型、取消规则、总价和剩余库存，然后完成预订。"
+    },
+    {
+      "id": "TRG-D04",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "data",
+      "critical_negative": false,
+      "prompt": "Build an analytics workspace for retention cohorts, with filters, source freshness, uncertainty, and a table fallback for exact values."
+    },
+    {
+      "id": "TRG-D05",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "motion",
+      "critical_negative": false,
+      "prompt": "为一款精密测量设备的发布页设计一个有空间感的首屏动效，但必须有 reduced-motion 静态版本。"
+    },
+    {
+      "id": "TRG-D06",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "redesign",
+      "critical_negative": false,
+      "prompt": "Make this existing nonprofit donation page feel less generic while preserving its current payment flow and brand assets."
+    },
+    {
+      "id": "TRG-D07",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "design-system",
+      "critical_negative": false,
+      "prompt": "为正在增长的 B2B 产品整理颜色、间距、状态和按钮变体规则，避免多个页面的组件表现不一致。"
+    },
+    {
+      "id": "TRG-D08",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "modern-web",
+      "critical_negative": false,
+      "prompt": "Improve a responsive component with container queries and a native popover, while keeping a usable fallback for unsupported browsers."
+    },
+    {
+      "id": "TRG-D09",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "brand",
+      "critical_negative": false,
+      "prompt": "我需要一个音乐节官网，不要普通居中标题加卡片墙；要有明确的节目层级、购票入口和一处有理由的动效。"
+    },
+    {
+      "id": "TRG-D10",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "product",
+      "critical_negative": false,
+      "prompt": "Design a compact admin interface for reviewing refund requests, including queue states, decision reasons, and keyboard-friendly controls."
+    },
+    {
+      "id": "TRG-D11",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "primary",
+      "category": "commerce",
+      "critical_negative": false,
+      "prompt": "请实现一个护肤品 PDP，让用户能看成分、规格、订阅选项、配送限制和可信的价格状态。"
+    },
+    {
+      "id": "TRG-D12",
+      "split": "development",
+      "language": "en",
+      "expected_role": "primary",
+      "category": "data",
+      "critical_negative": false,
+      "prompt": "Choose an appropriate representation for forecast versus actual revenue and explain the accessible fallback when confidence is low."
+    },
+    {
+      "id": "TRG-D13",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "a11y",
+      "critical_negative": false,
+      "prompt": "审查这个复杂筛选面板的语义、键盘路径、焦点恢复和错误提示；同时提出不破坏视觉层级的修复方案。"
+    },
+    {
+      "id": "TRG-D14",
+      "split": "development",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "performance",
+      "critical_negative": false,
+      "prompt": "The hero image is probably the LCP candidate. Diagnose the UI loading path and propose changes that preserve the intended visual composition."
+    },
+    {
+      "id": "TRG-D15",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "memory",
+      "critical_negative": false,
+      "prompt": "一个带 Canvas 背景和抽屉的 React 页面多次进入后越来越卡。请定位可能的动画、监听器和资源清理边界。"
+    },
+    {
+      "id": "TRG-D16",
+      "split": "development",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "browser-debug",
+      "critical_negative": false,
+      "prompt": "Use browser inspection to find why a mobile checkout drawer overflows horizontally and loses visible focus after closing."
+    },
+    {
+      "id": "TRG-D17",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "a11y",
+      "critical_negative": false,
+      "prompt": "为一个数据仪表盘检查图表是否只依赖颜色、是否有表格替代和可访问的筛选交互。"
+    },
+    {
+      "id": "TRG-D18",
+      "split": "development",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "performance",
+      "critical_negative": false,
+      "prompt": "Audit whether scroll-linked motion and a WebGL background are harming the landing page's first render; keep a defensible fallback."
+    },
+    {
+      "id": "TRG-D19",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "with-specialist",
+      "category": "memory",
+      "critical_negative": false,
+      "prompt": "检查一个 Three.js 产品查看器在路由切换后是否泄漏 geometry、texture、requestAnimationFrame 或控制器。"
+    },
+    {
+      "id": "TRG-D20",
+      "split": "development",
+      "language": "en",
+      "expected_role": "with-specialist",
+      "category": "browser-debug",
+      "critical_negative": false,
+      "prompt": "Inspect the console and DOM of a modal flow that works visually but returns focus to the wrong control after validation fails."
+    },
+    {
+      "id": "TRG-D21",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "backend",
+      "critical_negative": true,
+      "prompt": "给现有 Node API 增加一个分页的订单查询接口和单元测试，不涉及页面或用户界面。"
+    },
+    {
+      "id": "TRG-D22",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "database",
+      "critical_negative": true,
+      "prompt": "Write a PostgreSQL migration to split customer addresses into normalized tables and backfill the existing rows."
+    },
+    {
+      "id": "TRG-D23",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "cloud",
+      "critical_negative": true,
+      "prompt": "配置 Firebase Authentication 的邮箱登录和 Firestore 安全规则，只讨论后端权限策略。"
+    },
+    {
+      "id": "TRG-D24",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "extension",
+      "critical_negative": true,
+      "prompt": "Create a Manifest V3 Chrome extension that injects a content script and stores a setting in chrome.storage."
+    },
+    {
+      "id": "TRG-D25",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "copywriting",
+      "critical_negative": false,
+      "prompt": "为一家咖啡订阅服务写 10 个中文广告标题和三段不同语气的品牌文案。"
+    },
+    {
+      "id": "TRG-D26",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "image-generation",
+      "critical_negative": false,
+      "prompt": "Generate a photorealistic image of a ceramic perfume bottle on wet black stone."
+    },
+    {
+      "id": "TRG-D27",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "static-data",
+      "critical_negative": false,
+      "prompt": "读取这份 CSV，计算每个城市的平均订单金额，并输出排序后的 JSON。"
+    },
+    {
+      "id": "TRG-D28",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "security",
+      "critical_negative": true,
+      "prompt": "Review this OAuth callback handler for token validation and open redirect vulnerabilities."
+    },
+    {
+      "id": "TRG-D29",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "devops",
+      "critical_negative": true,
+      "prompt": "写一个 GitHub Actions 工作流，在 main 分支合并后构建并发布 Docker 镜像。"
+    },
+    {
+      "id": "TRG-D30",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "documentation",
+      "critical_negative": false,
+      "prompt": "Summarize this API reference into onboarding notes for new backend engineers."
+    },
+    {
+      "id": "TRG-D31",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "backend",
+      "critical_negative": true,
+      "prompt": "修复一个 Express 服务中的竞态条件：同一优惠券可能被并发兑换两次。"
+    },
+    {
+      "id": "TRG-D32",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "database",
+      "critical_negative": true,
+      "prompt": "Explain why this Redis cache invalidation strategy returns stale inventory values under concurrent writes."
+    },
+    {
+      "id": "TRG-D33",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "cloud",
+      "critical_negative": true,
+      "prompt": "比较 Cloud Run 和 Kubernetes 用于托管一个 Python 批处理服务的成本与运维取舍。"
+    },
+    {
+      "id": "TRG-D34",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "extension",
+      "critical_negative": true,
+      "prompt": "Implement declarativeNetRequest rules that block a set of tracking domains in a browser extension."
+    },
+    {
+      "id": "TRG-D35",
+      "split": "development",
+      "language": "zh",
+      "expected_role": "out-of-scope",
+      "category": "copywriting",
+      "critical_negative": false,
+      "prompt": "把这段产品发布说明润色成更简洁、专业的中文，不需要改变页面结构。"
+    },
+    {
+      "id": "TRG-D36",
+      "split": "development",
+      "language": "en",
+      "expected_role": "out-of-scope",
+      "category": "image-generation",
+      "critical_negative": false,
+      "prompt": "Edit this attached product photo to remove the background and make the surface matte white."
+    }
+  ]
+}

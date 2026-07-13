@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northline Practice - before</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; background: #151916; color: #f5f7f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #151916; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #d8a546; outline-offset: 4px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px clamp(20px, 5vw, 76px); position: relative; z-index: 2; }
+    .nav a { color: inherit; text-decoration: none; margin-left: 18px; }
+    .hero { min-height: 720px; display: grid; align-content: end; padding: clamp(28px, 7vw, 104px); background: linear-gradient(0deg, rgba(7,10,8,.85), rgba(7,10,8,.14)), url("../assets/architecture-exterior.webp") center / cover; }
+    .hero h1 { max-width: 960px; margin: 0; font-size: clamp(54px, 10vw, 150px); line-height: .87; letter-spacing: 0; }
+    .hero p { max-width: 500px; margin: 26px 0; color: #d8ddd9; font-size: 18px; line-height: 1.55; }
+    .hero button { width: max-content; padding: 14px 18px; border: 1px solid #e9edea; background: transparent; color: #fff; }
+    main { padding: 72px clamp(20px, 5vw, 76px); }
+    .intro { max-width: 680px; margin-bottom: 48px; }
+    .intro span { color: #abb9b1; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .project-grid article { min-height: 300px; display: flex; flex-direction: column; justify-content: end; padding: 22px; background: linear-gradient(0deg, rgba(8,12,9,.8), rgba(8,12,9,.08)), url("../assets/architecture-exterior.webp") center / cover; border: 1px solid #314238; }
+    .project-grid p { color: #d4ddd7; }
+    .project-grid a { color: #fff; }
+    @media (max-width: 760px) { .nav { align-items: start; flex-direction: column; gap: 14px; } .nav a { margin-left: 0; margin-right: 12px; } .hero { min-height: 620px; } .project-grid { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="nav"><strong id="practice"></strong><nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a href="#inquiry">Inquiry</a></nav></header>
+  <main data-case="brand-before">
+    <section class="hero" aria-labelledby="page-title"><span>Architecture practice</span><h1 id="page-title">Spaces that endure.</h1><p>We shape lasting places through careful design, thoughtful collaboration, and a clear point of view.</p><button type="button" id="explore">Explore work</button></section>
+    <section class="intro" id="work"><span>Selected work</span><h2>Projects with a shared visual rhythm</h2><p>Every project is presented as a quiet image with a short summary below.</p></section>
+    <section class="project-grid" id="projects" aria-label="Projects"></section>
+  </main>
+  <script src="fixture.js"></script>
+  <script>
+    document.querySelector("#practice").textContent = fixture.practice;
+    document.querySelector("#projects").innerHTML = fixture.projects.map(function(project) { return '<article><p>' + project.type + ' / ' + project.year + '</p><h2>' + project.title + '</h2><a href="#inquiry">View project</a></article>'; }).join("");
+    document.querySelector("#explore").addEventListener("click", function() { document.querySelector("#work").scrollIntoView({ behavior: "smooth" }); });
+  </script>
+</body>
+</html>

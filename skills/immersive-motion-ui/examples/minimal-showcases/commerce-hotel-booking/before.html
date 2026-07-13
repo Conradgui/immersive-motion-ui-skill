@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dock House - before</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; background: #20211f; color: #f4f4ed; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #20211f; }
+    button, input { font: inherit; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #f0b65d; outline-offset: 3px; }
+    .hero { min-height: 680px; display: grid; align-content: end; padding: clamp(26px, 7vw, 92px); background: linear-gradient(0deg, rgba(14,15,13,.92), rgba(14,15,13,.12)), url("../assets/hotel-terrace.webp") center / cover; }
+    .hero h1 { max-width: 800px; margin: 0; font-size: clamp(58px, 11vw, 150px); line-height: .84; letter-spacing: 0; }
+    .hero p { max-width: 460px; font-size: 18px; line-height: 1.5; }
+    .search { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; padding: 14px; background: rgba(28,30,27,.82); backdrop-filter: blur(10px); }
+    .search label { display: grid; gap: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .search input { min-height: 42px; min-width: 170px; border: 1px solid #a6a99e; background: #f4f4ed; color: #1e211f; padding: 0 10px; }
+    .search button { min-height: 42px; align-self: end; padding: 0 16px; border: 1px solid #f4f4ed; background: #f4f4ed; color: #1e211f; font-weight: 700; }
+    main { max-width: 1080px; margin: auto; padding: 56px 24px 84px; }
+    .room-carousel { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 12px; align-items: center; }
+    .room-carousel > button { min-height: 48px; border: 1px solid #72776d; background: transparent; color: #f4f4ed; }
+    .room { min-height: 560px; display: grid; align-content: end; padding: 30px; background: linear-gradient(0deg, rgba(13,14,12,.86), rgba(13,14,12,.04)), url("../assets/hotel-courtyard.webp") center / cover; }
+    .room p { max-width: 480px; color: #dedfd8; }
+    .room h2 { margin: 0; font-size: 42px; }
+    .room button { width: max-content; margin-top: 18px; padding: 12px 15px; border: 1px solid #f4f4ed; background: #f4f4ed; color: #1e211f; font-weight: 700; }
+    .review { max-width: 650px; margin: 42px auto 0; padding: 22px; border: 1px solid #565a52; color: #d9ddd6; }
+    .review[hidden] { display: none; }
+    @media (max-width: 620px) { .hero { min-height: 560px; } .room-carousel { grid-template-columns: 1fr; } .room-carousel > button { display: none; } .room { min-height: 470px; padding: 22px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main data-case="commerce-before">
+    <section class="hero" aria-labelledby="page-title"><p id="hotel"></p><h1 id="page-title">A stay with room to linger.</h1><p>Old brick, quiet rooms, and a private courtyard in the center of the district.</p><form class="search"><label>Check in<input type="text" value="16 May" aria-label="Check in"></label><label>Check out<input type="text" value="18 May" aria-label="Check out"></label><label>Guests<input type="text" value="2 adults" aria-label="Guests"></label><button type="button">Check rooms</button></form></section>
+    <section aria-labelledby="rooms-title"><h2 id="rooms-title">Choose a room</h2><div class="room-carousel"><button type="button" id="previous" aria-label="Previous room">Previous</button><article class="room" id="room"></article><button type="button" id="next" aria-label="Next room">Next</button></div></section>
+    <section class="review" id="review" hidden aria-live="polite"></section>
+  </main>
+  <script src="fixture.js"></script>
+  <script>
+    var index = 0;
+    document.querySelector("#hotel").textContent = fixture.hotel;
+    function showRoom() { var room = fixture.rooms[index]; var node = document.querySelector("#room"); node.style.backgroundImage = 'linear-gradient(0deg, rgba(13,14,12,.86), rgba(13,14,12,.04)), url("' + room.image + '")'; node.innerHTML = '<p>' + room.inclusion + '</p><h2>' + room.name + '</h2><p>From $' + room.rate + ' per night</p><button type="button" id="select-room">Select room</button>'; document.querySelector("#select-room").addEventListener("click", function() { document.querySelector("#review").hidden = false; document.querySelector("#review").innerHTML = '<h2>Review your stay</h2><p>' + room.name + ' selected.</p><p>Cancellation and total are shown at the next step.</p>'; document.querySelector("#review").scrollIntoView({ behavior: "smooth" }); }); }
+    document.querySelector("#previous").addEventListener("click", function() { index = (index + fixture.rooms.length - 1) % fixture.rooms.length; showRoom(); });
+    document.querySelector("#next").addEventListener("click", function() { index = (index + 1) % fixture.rooms.length; showRoom(); });
+    showRoom();
+  </script>
+</body>
+</html>

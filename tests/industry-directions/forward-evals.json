@@ -1,0 +1,112 @@
+{
+  "skill_name": "immersive-motion-ui",
+  "mode": "core-only",
+  "library_available": false,
+  "status": "NOT EXECUTED",
+  "evals": [
+    {
+      "id": "healthcare-operations-dashboard",
+      "prompt": "为一家区域医院设计日常使用的患者流转和床位运营后台。护士长需要高频查看拥堵、等待时间和异常，但不要因为是医疗行业就默认做成浅青色宣传页。请先给出设计方向再说明验证计划。",
+      "expected_family": "1. SaaS / 产品工具",
+      "cross_family_override": false,
+      "assertions": [
+        "选择 SaaS / 产品工具而不是品牌页",
+        "明确医疗行业的懒惰默认",
+        "给出两条结构不同的方向",
+        "动效上限适合高频操作",
+        "包含错误、键盘和数据状态验证"
+      ]
+    },
+    {
+      "id": "biotech-product-launch",
+      "prompt": "为一家基因编辑初创公司的新平台发布页建立视觉方向。目标是向研究合作方解释可信度和突破点，不需要真实数据分析工作台，也不要直接套 DNA 粒子和紫色 AI 光效。",
+      "expected_family": "2. 品牌 / 作品集",
+      "cross_family_override": false,
+      "assertions": [
+        "选择品牌 / 作品集",
+        "拒绝 DNA 粒子等行业直觉模板",
+        "给出 editorial authority 与 object/process 类两条可区分方向",
+        "说明真实证据和素材如何影响选择",
+        "不依赖 Library 完成判断"
+      ]
+    },
+    {
+      "id": "fashion-mobile-checkout",
+      "prompt": "改进一个高端服装品牌的移动结账页。问题是尺码、配送和错误提示不清楚。品牌团队想要更多时装周感，但不能影响付款任务。",
+      "expected_family": "3. Commerce",
+      "cross_family_override": false,
+      "assertions": [
+        "选择 Commerce",
+        "品牌氛围不覆盖结账任务",
+        "方向围绕 inspection 或 guided confidence",
+        "动效上限为低",
+        "验证尺码、配送、错误和中断恢复"
+      ]
+    },
+    {
+      "id": "climate-risk-analytics",
+      "prompt": "设计一个给城市规划师使用的气候风险分析工具，包含地图、时间范围、置信区间、区域对比和数据来源。不要做成只有 KPI 卡片的模板仪表盘。",
+      "expected_family": "4. 数据应用 / 仪表盘",
+      "cross_family_override": false,
+      "assertions": [
+        "选择数据应用 / 仪表盘",
+        "区分 decision cockpit 和 analytical workspace",
+        "保留置信度与来源",
+        "图表颜色有语义而非装饰",
+        "验证筛选、单位、空状态和摘要详情一致性"
+      ]
+    },
+    {
+      "id": "museum-digital-archive",
+      "prompt": "为地方博物馆做一个可检索的数字档案，包含长文、藏品图片、年代、出处、作者和专题策展路径。用户既要阅读，也要浏览收藏。",
+      "expected_family": "5. 内容 / 媒体",
+      "cross_family_override": false,
+      "assertions": [
+        "选择内容 / 媒体",
+        "给出 reading system 和 curated sequence 两条方向",
+        "处理图片说明和出处",
+        "动效不破坏阅读位置",
+        "验证搜索、深链接、焦点和媒体替代文本"
+      ]
+    },
+    {
+      "id": "night-festival-campaign",
+      "prompt": "为一个三晚电子音乐节制作发布体验，需要强记忆点、演出阵容、日期、场地、票务和 reduced-motion 版本。允许沉浸式视觉，但票务和时间不能藏起来。",
+      "expected_family": "6. 活动 / 沉浸式展示",
+      "cross_family_override": false,
+      "assertions": [
+        "选择活动 / 沉浸式展示",
+        "给出 timed campaign 与 interactive phenomenon 两条方向",
+        "日期场地票务优先可见",
+        "限制一个主要动效引擎",
+        "包含移动/GPU 和 reduced-motion fallback"
+      ]
+    },
+    {
+      "id": "festival-scheduling-tool-override",
+      "prompt": "给音乐节工作人员做一个排期冲突管理工具，需要拖动场次、发现舞台冲突、查看人员状态并处理错误。不要因为项目是音乐节就做成霓虹宣传页。",
+      "expected_family": "1. SaaS / 产品工具",
+      "cross_family_override": true,
+      "assertions": [
+        "按工作任务选择 SaaS / 产品工具",
+        "明确拒绝音乐节宣传视觉默认",
+        "两条方向都支持高频排期操作",
+        "动效只用于对象连续性和冲突反馈",
+        "验证拖动、键盘、错误和并发状态"
+      ]
+    },
+    {
+      "id": "hotel-booking-override",
+      "prompt": "为一家设计酒店改进房型选择和预订流程。用户要比较日期、房型、退款条件和总价。酒店有很强的摄影和品牌故事，但任务目标是完成预订。",
+      "expected_family": "3. Commerce",
+      "cross_family_override": true,
+      "assertions": [
+        "按交易任务选择 Commerce 而不是品牌族",
+        "摄影服务于房型检查而非遮挡价格",
+        "给出 inspection first 与 guided confidence 两条方向",
+        "动效不延迟日期、总价和预订控件",
+        "验证库存、退款条件、价格和移动操作"
+      ]
+    }
+  ]
+}

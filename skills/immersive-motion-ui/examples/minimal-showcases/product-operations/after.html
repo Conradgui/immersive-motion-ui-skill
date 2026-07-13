@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient flow - after</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; background: #f4f5f2; color: #17211e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f5f2; }
+    button, select { font: inherit; }
+    button:focus-visible, select:focus-visible, tr:focus-visible { outline: 3px solid #0b6d5c; outline-offset: -3px; }
+    .shell { min-height: 100vh; display: grid; grid-template-columns: 228px minmax(0, 1fr); }
+    nav { padding: 24px 16px; background: #1d2c28; color: #f4f5f2; }
+    nav strong { display: block; margin-bottom: 36px; }
+    nav a { display: block; padding: 10px 12px; color: inherit; text-decoration: none; border-radius: 4px; }
+    nav a[aria-current="page"] { background: #335d50; }
+    .content { padding: 24px 30px 64px; }
+    .page-head { display: flex; justify-content: space-between; align-items: start; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #cbd5d0; }
+    h1, h2, p { margin-top: 0; }
+    h1 { margin-bottom: 6px; font-size: 30px; }
+    .scope { display: flex; gap: 8px; align-items: center; color: #435650; font-size: 14px; }
+    .scope select { min-height: 40px; border: 1px solid #8da49c; border-radius: 4px; background: #fbfcfa; padding: 0 10px; }
+    .status-line { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 20px 0; }
+    .status-line article { padding: 14px; border-left: 3px solid #8aaea2; background: #e9efeb; }
+    .status-line span { display: block; color: #53665f; font-size: 12px; }
+    .status-line strong { font-size: 24px; }
+    .workspace { display: grid; grid-template-columns: minmax(290px, .8fr) minmax(520px, 1.7fr); gap: 18px; }
+    .panel { min-width: 0; border: 1px solid #cbd5d0; border-radius: 6px; background: #fbfcfa; }
+    .panel header { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 18px 12px; border-bottom: 1px solid #e0e6e2; }
+    .queue { padding: 10px; }
+    .queue button { width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 10px; margin: 0 0 8px; padding: 14px; border: 1px solid #d4dfd9; border-radius: 4px; background: #fbfcfa; color: #17211e; text-align: left; }
+    .queue button:hover { border-color: #0b6d5c; background: #f0f7f4; }
+    .queue b { display: block; }
+    .tag { align-self: start; padding: 4px 7px; border-radius: 999px; background: #f6e7d7; color: #754210; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 13px 16px; border-bottom: 1px solid #e2e8e5; text-align: left; white-space: nowrap; }
+    th { color: #53665f; font-size: 12px; font-weight: 600; }
+    td:last-child { white-space: normal; }
+    tbody tr:hover { background: #f3f8f5; }
+    .drawer { position: fixed; top: 0; right: 0; width: min(440px, 100vw); height: 100vh; padding: 28px; background: #fbfcfa; box-shadow: -18px 0 48px rgba(21,39,32,.18); transform: translateX(105%); transition: transform .24s ease; z-index: 3; overflow: auto; }
+    .drawer[data-open="true"] { transform: translateX(0); }
+    .drawer form { display: grid; gap: 16px; }
+    .drawer label { display: grid; gap: 7px; font-weight: 700; }
+    .drawer select { min-height: 42px; padding: 0 10px; border: 1px solid #8da49c; border-radius: 4px; background: #fbfcfa; }
+    .drawer button { min-height: 42px; padding: 0 14px; border: 1px solid #0b6d5c; border-radius: 4px; background: #0b6d5c; color: #f8fbf8; font-weight: 700; }
+    .drawer .close { background: #fbfcfa; color: #0b6d5c; }
+    .error { min-height: 24px; color: #a33322; font-size: 14px; }
+    .live { min-height: 22px; margin-top: 18px; color: #0b6d5c; font-weight: 700; }
+    @media (max-width: 900px) { .shell { grid-template-columns: 1fr; } nav { display: flex; gap: 12px; overflow: auto; padding: 12px 18px; } nav strong { margin: 8px 12px 0 0; white-space: nowrap; } nav a { white-space: nowrap; } .content { padding: 20px 16px 56px; } .workspace { grid-template-columns: 1fr; } .status-line { grid-template-columns: repeat(2, 1fr); } .table-wrap { overflow-x: auto; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <div class="shell" data-case="product-after">
+    <nav aria-label="Primary"><strong>Regional care</strong><a href="#flow" aria-current="page">Patient flow</a><a href="#beds">Bed board</a><a href="#staff">Staffing</a><a href="#reports">Reports</a></nav>
+    <main class="content" id="flow">
+      <header class="page-head"><div><h1>Patient flow</h1><p id="updated"></p></div><label class="scope">Unit <select aria-label="Unit"><option>All units</option><option>Ward B</option><option>Ward C</option></select></label></header>
+      <section class="status-line" id="stats" aria-label="Current scope"></section>
+      <section class="workspace" aria-label="Transfer workspace">
+        <article class="panel"><header><div><h2>Exceptions</h2><span>Prioritized by wait and acuity</span></div><span id="queue-count"></span></header><div class="queue" id="queue"></div></article>
+        <article class="panel"><header><div><h2>Bed and transfer state</h2><span>Current scope: all units</span></div></header><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Wait</th><th>Acuity</th><th>Destination</th><th>Blocker</th><th>Owner</th></tr></thead><tbody id="transfer-table"></tbody></table></div></article>
+      </section>
+      <p class="live" aria-live="polite" id="live-status"></p>
+    </main>
+  </div>
+  <aside class="drawer" id="transfer-drawer" aria-labelledby="drawer-title" aria-hidden="true">
+    <button class="close" type="button" id="close-drawer">Close details</button>
+    <h2 id="drawer-title">Transfer review</h2><p id="drawer-summary"></p>
+    <form id="transfer-form"><label>Action<select id="action"><option value="">Choose an action</option></select></label><label>Reason<select id="reason"><option value="">Choose a reason</option><option>Capacity confirmed</option><option>Clinical priority reviewed</option><option>Transport confirmed</option></select></label><p class="error" data-state="error" id="error" role="alert"></p><button type="submit">Save transfer action</button></form>
+  </aside>
+  <script src="fixture.js"></script>
+  <script>
+    var current = fixture.transfers[0];
+    var drawerOpener = null;
+    document.querySelector("#updated").textContent = fixture.updated;
+    document.querySelector("#stats").innerHTML = fixture.stats.map(function(item) { return '<article><span>' + item[0] + '</span><strong>' + item[1] + '</strong></article>'; }).join("");
+    document.querySelector("#queue-count").textContent = fixture.transfers.length + " open";
+    document.querySelector("#action").innerHTML += fixture.actions.map(function(action) { return '<option>' + action + '</option>'; }).join("");
+    document.querySelector("#queue").innerHTML = fixture.transfers.map(function(item, index) { return '<button type="button" data-action="open-transfer" data-index="' + index + '"><span><b>' + item.initials + ' - ' + item.blocker + '</b><small>' + item.destination + ' / owner ' + item.owner + '</small></span><span class="tag">' + item.wait + '</span></button>'; }).join("");
+    document.querySelector("#transfer-table").innerHTML = fixture.transfers.map(function(item) { return '<tr tabindex="0"><td>' + item.initials + '</td><td>' + item.wait + '</td><td>' + item.acuity + '</td><td>' + item.destination + '</td><td>' + item.blocker + '</td><td>' + item.owner + '</td></tr>'; }).join("");
+    function closeDrawer() { document.querySelector("#transfer-drawer").dataset.open = "false"; document.querySelector("#transfer-drawer").setAttribute("aria-hidden", "true"); if (drawerOpener) drawerOpener.focus(); }
+    function openDrawer(index, opener) { drawerOpener = opener; current = fixture.transfers[index]; document.querySelector("#drawer-summary").textContent = current.initials + ": " + current.blocker + ". Destination: " + current.destination + "."; document.querySelector("#transfer-drawer").dataset.open = "true"; document.querySelector("#transfer-drawer").setAttribute("aria-hidden", "false"); document.querySelector("#action").focus(); }
+    document.querySelectorAll("[data-action=\"open-transfer\"]").forEach(function(button) { button.addEventListener("click", function() { openDrawer(Number(button.dataset.index), button); }); });
+    document.querySelector("#close-drawer").addEventListener("click", closeDrawer);
+    document.querySelector("#transfer-form").addEventListener("submit", function(event) { event.preventDefault(); var reason = document.querySelector("#reason").value; if (!reason) { document.querySelector("#error").textContent = "Choose a reason before saving this action."; document.querySelector("#reason").focus(); return; } document.querySelector("#error").textContent = ""; document.querySelector("#live-status").textContent = current.initials + " updated. " + document.querySelector("#action").value + ": " + reason + "."; closeDrawer(); });
+  </script>
+</body>
+</html>

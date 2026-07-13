@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northline Practice - after</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; background: #eff1ed; color: #17231f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eff1ed; }
+    a, button { font: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #b04d26; outline-offset: 4px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px clamp(20px, 5vw, 76px); border-bottom: 1px solid #c6cec8; }
+    .nav a { margin-left: 18px; color: inherit; text-decoration: none; }
+    main { padding: 0 clamp(20px, 5vw, 76px) 80px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); gap: 32px; padding: 52px 0 76px; border-bottom: 1px solid #c6cec8; }
+    .hero figure { margin: 0; }
+    .hero img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    figcaption { margin-top: 10px; color: #52655e; font-size: 14px; line-height: 1.45; }
+    .hero-copy { display: grid; align-content: end; }
+    .hero-copy p:first-child, .label { margin-bottom: 14px; color: #476459; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { margin: 0 0 20px; font-size: clamp(46px, 7vw, 96px); line-height: .91; letter-spacing: 0; }
+    .hero-copy > p:not(:first-child) { max-width: 430px; margin: 0 0 26px; font-size: 18px; line-height: 1.5; }
+    .view-switch { display: flex; gap: 8px; }
+    .view-switch button { padding: 10px 12px; border: 1px solid #71857c; border-radius: 4px; background: transparent; color: #17382e; }
+    .view-switch button[aria-pressed="true"] { background: #17382e; color: #f8fbf8; }
+    .facts { padding: 28px 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; border-bottom: 1px solid #c6cec8; }
+    .facts span { display: block; color: #52655e; font-size: 12px; }
+    .facts strong { font-size: 18px; }
+    .project-index { display: grid; grid-template-columns: .7fr 1.3fr; gap: 44px; padding: 62px 0; border-bottom: 1px solid #c6cec8; }
+    .project-list { display: grid; gap: 0; }
+    .project { display: grid; grid-template-columns: .7fr .8fr 1fr auto; gap: 12px; padding: 18px 0; border-top: 1px solid #ccd5cf; }
+    .project a { color: #17382e; }
+    .method { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; padding: 62px 0; }
+    .method figure { margin: 0; }
+    .method img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
+    .method p { max-width: 510px; font-size: 18px; line-height: 1.55; }
+    .inquiry { display: flex; justify-content: space-between; gap: 20px; padding: 30px 0; border-top: 1px solid #c6cec8; }
+    .inquiry a { align-self: center; padding: 12px 15px; border: 1px solid #17382e; background: #17382e; color: #f8fbf8; text-decoration: none; }
+    html[data-view="intervention"] .hero figure::after { content: "Retained brick / new threshold"; display: block; margin-top: 10px; color: #a44321; font-weight: 700; }
+    @media (max-width: 800px) { .nav { align-items: start; flex-direction: column; gap: 12px; } .nav a { margin-left: 0; margin-right: 14px; } .hero, .project-index, .method { grid-template-columns: 1fr; } .facts { grid-template-columns: repeat(2, 1fr); } .project { grid-template-columns: 1fr 1fr; } .inquiry { flex-direction: column; } .inquiry a { align-self: start; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="nav"><strong id="practice"></strong><nav aria-label="Primary"><a href="#projects">Projects</a><a href="#method">Method</a><a href="#inquiry">Start an inquiry</a></nav></header>
+  <main data-case="brand-after">
+    <section class="hero" aria-labelledby="page-title"><figure><img src="../assets/architecture-exterior.webp" alt="Existing red brick hall with a new dark metal and glass public entrance"><figcaption>Harbor Works, East Quay. A loading hall reopened for public making and events.</figcaption></figure><div class="hero-copy"><p>Adaptive reuse</p><h1 id="page-title">Retain what gives a place its memory.</h1><p id="statement"></p><div class="view-switch" aria-label="Project evidence view"><button type="button" data-view="existing" aria-pressed="true">Existing fabric</button><button type="button" data-view="intervention" aria-pressed="false">New intervention</button></div></div></section>
+    <section class="facts" aria-label="Harbor Works facts"><article><span>Type</span><strong>Civic</strong></article><article><span>Status</span><strong>Completed</strong></article><article><span>Work</span><strong>Reuse and repair</strong></article><article><span>Evidence</span><strong>Built threshold</strong></article></section>
+    <section class="project-index" id="projects"><div><p class="label">Project index</p><h2>Transformation is the common thread, not a visual filter.</h2></div><div class="project-list" id="project-list"></div></section>
+    <section class="method" id="method"><figure><img src="../assets/architecture-material-detail.webp" alt="Existing brick meeting black steel and reused oak at a public threshold"><figcaption id="material-caption"></figcaption></figure><div><p class="label">Method</p><h2 id="material-title"></h2><p>We begin by documenting what can be kept, then make new structure legible rather than pretending it was always there. The details explain the practice as clearly as a large image.</p></div></section>
+    <section class="inquiry" id="inquiry"><div><p class="label">Start a project</p><h2>Tell us the place, stage, and constraints.</h2></div><a href="mailto:projects@example.test">Start an inquiry</a></section>
+  </main>
+  <script src="fixture.js"></script>
+  <script>
+    document.querySelector("#practice").textContent = fixture.practice;
+    document.querySelector("#statement").textContent = fixture.statement;
+    document.querySelector("#material-title").textContent = fixture.materialStudy.title;
+    document.querySelector("#material-caption").textContent = fixture.materialStudy.caption;
+    document.querySelector("#project-list").innerHTML = fixture.projects.map(function(project) { return '<article class="project"><strong>' + project.title + '</strong><span>' + project.place + '</span><span>' + project.type + ' / ' + project.status + '</span><a href="#inquiry">Project facts</a></article>'; }).join("");
+    document.querySelectorAll("[data-view]").forEach(function(button) { button.addEventListener("click", function() { document.documentElement.dataset.view = button.dataset.view; document.querySelectorAll("[data-view]").forEach(function(item) { item.setAttribute("aria-pressed", String(item === button)); }); }); });
+  </script>
+</body>
+</html>

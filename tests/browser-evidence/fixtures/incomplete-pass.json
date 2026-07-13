@@ -1,0 +1,19 @@
+{
+  "build": {
+    "status": "NOT EXECUTED",
+    "reason": "Standalone HTML fixture; no build step is needed."
+  },
+  "browser": {
+    "status": "PASS",
+    "url_or_file": "tests/minimal-showcases/commerce-hotel-booking/after.html",
+    "desktop_viewport": "1440x1000 PASS",
+    "mobile_viewport": "NOT EXECUTED",
+    "console_errors": "NOT EXECUTED",
+    "horizontal_overflow": "NOT EXECUTED",
+    "screenshots": []
+  },
+  "motion": {
+    "has_motion": true,
+    "reduced_motion_result": "PASS"
+  }
+}
