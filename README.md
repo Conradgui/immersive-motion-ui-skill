@@ -116,6 +116,13 @@ Core 查询不到 Library 时会继续工作；`query-library.mjs` 返回 `LIBRA
 
 本仓库不是空壳。Core 内含 25 个本地 reference，覆盖设计方向、品牌、产品、Commerce、数据可视化、动效、媒体、现代 Web、设计系统、性能、内存、a11y 和验证方法。索引见 [references/README.md](skills/immersive-motion-ui/references/README.md)。
 
+下面两张本地资产来自 Core 的离线实现测试。它们不是装饰性封面，也不是最终 UI 截图：左侧用于建筑改造品牌页的场所与材料叙事，右侧用于酒店预订页的空间检查与购买决策。
+
+| Brand / adaptive reuse | Commerce / hotel booking |
+| --- | --- |
+| <img src="skills/immersive-motion-ui/examples/minimal-showcases/assets/architecture-exterior.webp" alt="改造后的红砖工业建筑外立面，用于品牌页的场所证据" width="100%"> | <img src="skills/immersive-motion-ui/examples/minimal-showcases/assets/hotel-terrace.webp" alt="带庭院的酒店客房，用于预订页的空间检查与比较" width="100%"> |
+| 场所证据：让历史建筑、材料和改造关系成为品牌叙事的一部分。 | 决策媒体：展示空间尺度、采光和户外连接，而不是使用无关氛围图。 |
+
 [examples/README.md](skills/immersive-motion-ui/examples/README.md) 提供两类有边界的示例：
 
 - 三组可离线打开的 before / after：产品运营、建筑改造品牌页、酒店预订。
