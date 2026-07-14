@@ -42,6 +42,25 @@ flowchart LR
 
 全部 14 个能力模块及其 reference、fallback 和 verifier 定义在 [capability-manifest.json](skills/immersive-motion-ui/capability-manifest.json)。
 
+## 完整页面示例
+
+这些不是孤立的风格图，而是 Core 离线测试中的完整 `after` 页面。截图前执行了各自的主要交互，并同时检查桌面、移动端、控制台、横向溢出、键盘焦点和 reduced-motion。点击图片可查看完整尺寸。
+
+### Brand · Adaptive reuse
+
+场所证据、材料叙事、项目索引和询盘出口共同构成页面，而不是用一张建筑图代替品牌设计。
+
+<p align="center">
+  <a href="docs/readme/brand-adaptive-reuse-after.webp">
+    <img src="docs/readme/brand-adaptive-reuse-after.webp" alt="建筑改造事务所品牌页完整页面设计" width="78%">
+  </a>
+</p>
+
+| Product · Patient operations | Commerce · Hotel booking |
+| --- | --- |
+| <a href="docs/readme/product-operations-after.webp"><img src="docs/readme/product-operations-after.webp" alt="患者流转运营后台完整页面设计" width="100%"></a> | <a href="docs/readme/commerce-hotel-booking-after.webp"><img src="docs/readme/commerce-hotel-booking-after.webp" alt="酒店房型比较和预订完整页面设计" width="100%"></a> |
+| 稳定导航、异常优先级、状态表格与一次可审计的流转操作。 | 房型比较、真实空间媒体、总价与取消条款、选择状态连续性。 |
+
 ## 快速开始
 
 ### 1. 安装
@@ -116,13 +135,6 @@ Core 查询不到 Library 时会继续工作；`query-library.mjs` 返回 `LIBRA
 
 本仓库不是空壳。Core 内含 25 个本地 reference，覆盖设计方向、品牌、产品、Commerce、数据可视化、动效、媒体、现代 Web、设计系统、性能、内存、a11y 和验证方法。索引见 [references/README.md](skills/immersive-motion-ui/references/README.md)。
 
-下面两张本地资产来自 Core 的离线实现测试。它们不是装饰性封面，也不是最终 UI 截图：左侧用于建筑改造品牌页的场所与材料叙事，右侧用于酒店预订页的空间检查与购买决策。
-
-| Brand / adaptive reuse | Commerce / hotel booking |
-| --- | --- |
-| <img src="skills/immersive-motion-ui/examples/minimal-showcases/assets/architecture-exterior.webp" alt="改造后的红砖工业建筑外立面，用于品牌页的场所证据" width="100%"> | <img src="skills/immersive-motion-ui/examples/minimal-showcases/assets/hotel-terrace.webp" alt="带庭院的酒店客房，用于预订页的空间检查与比较" width="100%"> |
-| 场所证据：让历史建筑、材料和改造关系成为品牌叙事的一部分。 | 决策媒体：展示空间尺度、采光和户外连接，而不是使用无关氛围图。 |
-
 [examples/README.md](skills/immersive-motion-ui/examples/README.md) 提供两类有边界的示例：
 
 - 三组可离线打开的 before / after：产品运营、建筑改造品牌页、酒店预订。
@@ -193,6 +205,7 @@ skills/immersive-motion-ui/
   examples/                # 有边界的示例
   scripts/                 # 零 Library 依赖工具
 tests/                     # 契约与代理评测
+docs/readme/               # GitHub README 完整页面截图，不进入 Skill 安装载荷
 scripts/validate-core-package.mjs
 core-release-manifest.json
 ```

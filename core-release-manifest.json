@@ -11,6 +11,7 @@
   },
   "include": [
     "README.md",
+    "docs/readme/",
     "skills/immersive-motion-ui/SKILL.md",
     "skills/immersive-motion-ui/capability-manifest.json",
     "skills/immersive-motion-ui/agents/openai.yaml",
