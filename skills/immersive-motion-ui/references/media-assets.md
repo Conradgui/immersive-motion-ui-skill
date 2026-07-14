@@ -73,6 +73,8 @@ Generate media from a subject-specific brief, not a generic style label. Record 
 
 Generated imagery must not impersonate a real person, product, metric, event, or documentary record when authenticity matters.
 
+Read `image-generation.md` to choose the executable route, build the generation brief, coordinate optional Library retrieval, call an available generation tool, and review the result before integration.
+
 ## Library Boundary
 
 The optional Library may suggest IDs, prompts, demos, or local assets after Core has selected the media job and design direction. Treat results as candidates:

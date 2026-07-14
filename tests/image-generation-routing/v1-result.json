@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-07-14",
+  "method": "single independent Subagent blind classification",
+  "fixture": "fixtures/v1-prompts.json",
+  "score": {
+    "correct": 6,
+    "total": 6,
+    "accuracy": 1
+  },
+  "cases": [
+    {
+      "id": "IG01",
+      "expected": "EXISTING",
+      "predicted": "EXISTING",
+      "reason": "仓库已有完全匹配且授权明确的项目摄影资产。"
+    },
+    {
+      "id": "IG02",
+      "expected": "IMAGEGEN",
+      "predicted": "IMAGEGEN",
+      "reason": "需求是原创且不涉及真实身份或事实证据的抽象概念图。"
+    },
+    {
+      "id": "IG03",
+      "expected": "LIBRARY_THEN_IMAGEGEN",
+      "predicted": "LIBRARY_THEN_IMAGEGEN",
+      "reason": "Library 仅提供已验证的构图与材质方向，仍需生成缺失的房间资产。"
+    },
+    {
+      "id": "IG04",
+      "expected": "AUTHENTIC_SOURCE",
+      "predicted": "AUTHENTIC_SOURCE",
+      "reason": "精确医疗器械几何与监管配置必须来自制造商等权威真实来源。"
+    },
+    {
+      "id": "IG05",
+      "expected": "NO_MEDIA",
+      "predicted": "NO_MEDIA",
+      "reason": "装饰性主视觉不能帮助一线人员识别超时、阻塞或负责人。"
+    },
+    {
+      "id": "IG06",
+      "expected": "LIBRARY",
+      "predicted": "LIBRARY",
+      "reason": "Library 已有本地可用、授权明确且完全匹配的验证资产。"
+    }
+  ],
+  "limit": "This small synthetic set checks route comprehension only. It does not measure generated image quality, Library retrieval quality, or production behavior."
+}

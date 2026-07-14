@@ -35,7 +35,7 @@ flowchart LR
 | 视觉方向 | 反模板化判断、行业任务族、视觉 persona、设计方向与好坏案例对照 |
 | 产品与数据 UI | Dashboard、Admin、表格、图表、状态、单位、来源、置信度和高密度信息架构 |
 | Commerce | PDP、PLP、购物车、结账、定价与预订流程中的比较、信任和状态连续性 |
-| 动效与媒体 | CSS、GSAP、Framer Motion、3D、视频和媒体选择的适用边界、降级与 reduced-motion |
+| 动效与媒体 | CSS、GSAP、Framer Motion、3D、视频，以及现有资产 / Library / ImageGen / 真实来源之间的媒体路由 |
 | 设计系统 | Primitive / semantic token、mode、variant、component state 与跨页面一致性 |
 | 重设计与审查 | 保护既有结构的外科式改造，以及带优先级和证据的只读 audit |
 | 验证 | 静态扫描、结构化证据、浏览器检查、性能/内存/a11y 专项边界和诚实状态 |
@@ -133,7 +133,7 @@ Core 查询不到 Library 时会继续工作；`query-library.mjs` 返回 `LIBRA
 
 ## References 与示例
 
-本仓库不是空壳。Core 内含 25 个本地 reference，覆盖设计方向、品牌、产品、Commerce、数据可视化、动效、媒体、现代 Web、设计系统、性能、内存、a11y 和验证方法。索引见 [references/README.md](skills/immersive-motion-ui/references/README.md)。
+本仓库不是空壳。Core 内含 26 个本地 reference，覆盖设计方向、品牌、产品、Commerce、数据可视化、动效、媒体生成、现代 Web、设计系统、性能、内存、a11y 和验证方法。索引见 [references/README.md](skills/immersive-motion-ui/references/README.md)。
 
 [examples/README.md](skills/immersive-motion-ui/examples/README.md) 提供两类有边界的示例：
 
@@ -166,6 +166,8 @@ node skills/immersive-motion-ui/scripts/query-library.mjs \
 ## 验证状态
 
 当前 Core package validator、Skill validator 和静态契约测试均已通过。触发代理评测包含 72 条中英双语任务，由两个隔离 Subagent 盲判；holdout 的 activation F1 为 `1.0000`，role Macro-F1 为 `0.9659`，高风险误触发为 `0/10`。
+
+ImageGen 媒体路由另使用 6 条冻结合成请求做了一轮独立 Subagent 盲判，六类路径全部判断正确。这个小集合只验证规则可理解性，不衡量生成图片质量、Library 检索质量或生产行为。
 
 这些数字证明冻结语料上的代理分类表现，不代表 Codex 平台生产环境中的真实自动触发率。项目也不声称已经完成全量浏览器视觉验收、真实全局安装验证或 Codex 以外的平台支持。
 

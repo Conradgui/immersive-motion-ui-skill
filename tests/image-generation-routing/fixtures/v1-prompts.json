@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "labels": ["EXISTING", "LIBRARY", "LIBRARY_THEN_IMAGEGEN", "IMAGEGEN", "AUTHENTIC_SOURCE", "NO_MEDIA"],
+  "cases": [
+    {
+      "id": "IG01",
+      "prompt": "为一家建筑事务所重做项目页。仓库里已经有摄影师交付的建筑外观、材料细节和授权说明，画面与项目完全匹配。请决定主要媒体来源。"
+    },
+    {
+      "id": "IG02",
+      "prompt": "Create an original abstract hero image for a fictional climate-tech research studio. No real product, person, facility, or measured result should be depicted, and the optional Library is not installed."
+    },
+    {
+      "id": "IG03",
+      "prompt": "已连接 MotionSites Library。要为虚构精品酒店制作原创房间概念页；Library 没有可直接使用的房间照片，但返回了 verified 的构图 Prompt 和材质方向。决定主要资产路径。"
+    },
+    {
+      "id": "IG04",
+      "prompt": "Build a product page for a real surgical robot. Buyers must inspect the exact arm geometry, instrument ports, labels, and regulatory configuration; the manufacturer has not supplied imagery yet. Decide the media route."
+    },
+    {
+      "id": "IG05",
+      "prompt": "把医院患者流转后台做得更有沉浸感，但一线人员的任务是快速发现超时、阻塞和负责人。页面已有表格、状态与异常队列。决定是否需要生成主视觉图。"
+    },
+    {
+      "id": "IG06",
+      "prompt": "The optional Library contains a verified, locally available, licensed image of the exact fictional event installation described in the brief, with the required wide crop and no identity conflict. Choose the primary media route."
+    }
+  ]
+}

@@ -59,10 +59,17 @@
       "name": "动效、3D、视频、媒体和资源选择",
       "status": "active",
       "default_load": false,
-      "triggers": ["motion", "3d", "video"],
-      "references": ["references/motion-engines.md", "references/media-assets.md"],
+      "triggers": ["motion", "3d", "video", "imagegen", "generated imagery"],
+      "references": ["references/motion-engines.md", "references/media-assets.md", "references/image-generation.md"],
       "planned_references": [],
-      "dependencies": [],
+      "dependencies": [
+        {
+          "name": "image-generation-tool",
+          "kind": "optional",
+          "credentialed": false,
+          "time_sensitive": false
+        }
+      ],
       "fallback": "css-and-static-media",
       "verifier": "motion-review"
     },

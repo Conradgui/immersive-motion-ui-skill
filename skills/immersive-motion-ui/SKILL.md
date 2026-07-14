@@ -100,7 +100,8 @@ Load only the relevant files. For domain, diagnostic, or dependency-sensitive wo
 | data app, table, chart, metric, analytical workflow | `references/data-ui.md`, `references/data-apps.md` |
 | PDP, PLP, cart, checkout, pricing | `references/commerce-ui.md` |
 | motion choreography, cinematic hero, reduced motion | `references/motion-engines.md` |
-| photography, product imagery, video, illustration, generated or external media | `references/media-assets.md` |
+| photography, product imagery, video, illustration, or external media | `references/media-assets.md` |
+| decide whether to use existing assets, Library media, ImageGen, an authentic source, or no media | `references/media-assets.md`, `references/image-generation.md` |
 | generic/cheap UI audit | `references/anti-cheap.md` |
 | project inspection and implementation preflight | `references/preflight.md` |
 | modern CSS, native web API, progressive enhancement, or compatibility | `references/modern-web.md` |
@@ -133,6 +134,14 @@ Before building or rewriting a meaningful UI, state a compact design readout:
 7. Verification plan.
 
 Keep this short. Do not present multiple moodboards unless the user explicitly asks for options or the direction is genuinely high-risk.
+
+## Media Generation Router
+
+When important media is missing, load `references/media-assets.md` first and `references/image-generation.md` only if generation is a real candidate. Choose one route: existing asset, verified Library candidate, ImageGen, authentic source, or no media.
+
+Core-only may call an available image-generation tool from a subject-specific brief. Core + Library may first retrieve a relevant asset, prompt, or case, then generate only the uncovered need. Do not require a Library query when the user supplied the asset, requested an original direction, factual authenticity controls the source, or media is unnecessary.
+
+Never generate a substitute for a real person, exact product, property, event, metric, interface state, or documentary record. If generation tooling is unavailable, retain the brief, use the declared local fallback, and report `NOT EXECUTED`.
 
 ## Implementation Principles
 
