@@ -29,6 +29,15 @@ for (const includePath of manifest.include || []) {
 
 for (const excludePath of manifest.exclude || []) {
   if (excludePath === "multi-platform mirrors") continue;
+  if (excludePath === ".git/") {
+    const nestedGitPath = path.join(skillSourceRoot, ".git");
+    check(
+      `exclude.${excludePath}`,
+      !fs.existsSync(nestedGitPath),
+      ".git/ may exist at the repository root, but not inside the installable Skill payload"
+    );
+    continue;
+  }
   const resolved = path.join(repoRoot, excludePath);
   check(`exclude.${excludePath}`, !fs.existsSync(resolved), `${excludePath} must not exist in Core package`);
 }

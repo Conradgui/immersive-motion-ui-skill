@@ -81,6 +81,7 @@ test("Core package report includes capability manifest validation", () => {
   const report = JSON.parse(run.stdout);
   assert.equal(report.capabilityManifest?.status, "PASS", "Core package report is missing a passing capabilityManifest result");
   assert.equal(report.checks.some((item) => item.id === "capabilityManifest.valid" && item.pass), true);
+  assert.equal(report.checks.some((item) => item.id === "exclude..git/" && item.pass), true);
 });
 
 test("Core package permits only the bounded offline Skill example assets", () => {
